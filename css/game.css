@@ -3,12 +3,12 @@ body {
   background-attachment: fixed;
 }
 
-.titulo1, .titulo2, span{
+.titulo1, .titulo2, span {
   color: white;
   font-style: italic;
 }
 
-header{
+header {
   background-color: rgba(255, 255, 255, 0.1);
   font-size: 1.5em;
   display: flex;
@@ -21,7 +21,7 @@ header{
   border-radius: 5px;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -75,11 +75,52 @@ main{
   backface-visibility: hidden;
 }
 
-.reveal-card{
-    transform: rotateY(180deg);
+.reveal-card {
+  transform: rotateY(180deg);
 }
 
-.disabled-card{
+.disabled-card {
   filter: saturate(0);
   opacity: 0.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+  .grid, .grid2 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid, .grid2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid, .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid, .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 140px;
+  }
 }
