@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(
+        to top right,
+        #24252a 33%, 
+        #000080);
+    background-attachment: fixed;
+}
+ 
+.login-form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.login_header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+    color: white;
+}
+
+.login_input{
+    border: 8px;
+    border-radius: 8px;
+}
+
+.login_button{
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login_button :disabled{
+    background-color: #aaa;
+    cursor: auto;
+}
